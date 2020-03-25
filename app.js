@@ -11,8 +11,6 @@ async function searchGif(searchTerm) {
     };
     const res = await axios.get("https://api.giphy.com/v1/gifs/search", request);
     let i = Math.floor(Math.random() * res.data.data.length);
-    console.log(i);
-    console.log(res);
     const imgURL = res.data.data[i].images.original.url;
     appendGif(imgURL);
 }
