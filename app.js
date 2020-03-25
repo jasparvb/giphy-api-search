@@ -9,7 +9,7 @@ async function searchGif(searchTerm) {
             api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym"
         }
     };
-    const res = await axios.get("http://api.giphy.com/v1/gifs/search", request);
+    const res = await axios.get("https://api.giphy.com/v1/gifs/search", request);
     let i = Math.floor(Math.random() * res.data.data.length);
     console.log(i);
     console.log(res);
